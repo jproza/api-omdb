@@ -1,0 +1,40 @@
+# orientdb
+orient-conn-string: /Users/jproza/Downloads/db
+orient-username: admin
+orient-password: admin
+
+# pool de conexiones - size
+db-pool-min: 20
+db-pool-max: 100
+
+# db reintentos
+max-db-retries: 10
+
+# omdb config paths
+omdb-export-path: /Users/jproza/Downloads/omdb.zip
+omdb-movies-filename: movies.txt
+omdb-poster-url: http://omdbapi.com/?t=%i&apikey=%k
+
+# OMDB api key
+omdb-api-key: 863202ee
+omdb-download-url: http://beforethecode.com/projects/omdb/download.aspx?e=jproza@gmail.com&tsv=movies
+
+
+# URL que se invoca cuando se crea una cuenta
+# %e es el email %k es el key
+account-creation-confirm-url: http://localhost:8080/user/create/confirm/%e/%k/
+
+# URL que se invoca cuando cambia una cuenta
+password-change-confirm-url: http://localhost:8080/user/password/change/%e/pwd/%k/
+
+# auth, politica por defecto de expiracion de usuario
+authenticationCachePolicy: maximumSize=10000, expireAfterAccess=10m
+
+# logging
+logging:
+  level: INFO
+
+  appenders:
+    - type: console
+      threshold: INFO
+      target: stderr
